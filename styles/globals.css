@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.page {
+  margin-top: 5rem;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 15px;
+}

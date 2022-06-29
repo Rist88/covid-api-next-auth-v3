@@ -26,3 +26,14 @@ h2 {
 p {
   font-size: 15px;
 }
+
+/* .sign-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sign-message > p {
+  margin-top: 0.5em;
+  justify-self: center;
+} */

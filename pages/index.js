@@ -3,10 +3,13 @@ import { useContext } from "react";
 import AppContext from "../AppContext";
 import { Container } from "react-bootstrap";
 import Navigation from "../components/Navigation";
+import { getSession } from "next-auth/react";
 
 export default function Home() {
+  const sessionData = getSession();
   const value = useContext(AppContext);
   let { homeTitle, homeContent } = value.state.languages;
+  // console.log(JSON.stringify(sessionData, null, 2));
   return (
     <div>
       <Head>
@@ -19,6 +22,8 @@ export default function Home() {
       <Container className="page">
         <h2>{homeTitle}</h2>
         <p>{homeContent}</p>
+        <h3>Current session:</h3>
+        <p>{JSON.stringify(sessionData, null, 2)}</p>
       </Container>
     </div>
   );
